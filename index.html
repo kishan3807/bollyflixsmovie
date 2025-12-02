@@ -96,7 +96,7 @@
   <script>
     // Sample data (replace with real feed / API)
     const data = [
-      {id:1, title:'DeCA Test Airdrop', desc:'Claim tokens...', status:'live', tags:['ETH','KYC'], dateEnd:'2025-12-10', verified:true, pop:421, link:'https://decadrop.com'},
+      {id:1, title:'DeCA Test Airdrop', desc:'Claim tokens...', status:'live', tags:['ETH','KYC'], dateEnd:'2025-12-10', verified:true, pop:421, link:'https://decadrop.com'img:'https://i.ibb.co/BVDsSm0Z/images.jpg'},
       {id:2,title:'GalaxySwap Giveaway',desc:'Early adopters get bonus',status:'upcoming',tags:['BSC'],dateEnd:'2025-12-25',verified:false,pop:210},
       {id:3,title:'PixelPlay Drop',desc:'NFT + token rewards',status:'live',tags:['Polygon','NFT'],dateEnd:'2025-12-05',verified:true,pop:1200},
       {id:4,title:'Aurora Round',desc:'Testnet participation airdrop',status:'upcoming',tags:['Testnet'],dateEnd:'2026-01-10',verified:false,pop:78},
@@ -114,7 +114,13 @@
       for(const item of list){
         const div = document.createElement('div');div.className='card';
         div.innerHTML = `
-          <div class="thumb">${item.title.split(' ').slice(0,2).map(s=>s[0]).join('')}</div>
+        <div class="thumb">
+  ${item.img 
+    ? `<img src="${item.img}" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">`
+    : item.title.split(' ').slice(0,2).map(s=>s[0]).join('')
+  }
+</div>
+
           <h3 class="title">${item.title}</h3>
           <div class="meta">${item.desc}</div>
           <div class="tags">${item.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
