@@ -96,7 +96,7 @@
   <script>
     // Sample data (replace with real feed / API)
     const data = [
-      {id:1,title:'DeCA Test Airdrop',desc:'Claim tokens by completing tasks',status:'live',tags:['ETH','KYC'],dateEnd:'2025-12-10',verified:true,pop:421},
+      {id:1,title:'DeCA Test Airdrop',desc:'Claim tokens by completing tasks',status:'live',tags:['ETH','KYC'],dateEnd:'2025-12-10',verified:true,pop:421, link:'DeCATestAirdrop.html'},
       {id:2,title:'GalaxySwap Giveaway',desc:'Early adopters get bonus',status:'upcoming',tags:['BSC'],dateEnd:'2025-12-25',verified:false,pop:210},
       {id:3,title:'PixelPlay Drop',desc:'NFT + token rewards',status:'live',tags:['Polygon','NFT'],dateEnd:'2025-12-05',verified:true,pop:1200},
       {id:4,title:'Aurora Round',desc:'Testnet participation airdrop',status:'upcoming',tags:['Testnet'],dateEnd:'2026-01-10',verified:false,pop:78},
@@ -124,7 +124,7 @@
             </div>
             <div style="display:flex;gap:8px;align-items:center">
               <div class="status ${item.status==='live' ? 'live':'upcoming'}">${item.status.toUpperCase()}</div>
-              <button class="cta" onclick="alert ('Open details for: ${escape(item.title)}')">View</button>
+              <button class="cta" onclick="alert ('Open details for: ${escape(item.link)}')">View</button>
             </div>
           </div>
         `;
@@ -165,7 +165,7 @@
     });
 
     // small helper for escaping in onclick alert
-    function escape(s){return s.replaceAll("DeCATestAirdrop.html'","DeCA Test Airdrop\\'")}
+    function escape(s){return s.replaceAll("'","\\'")}
 
   </script>
 </body>
