@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airdrops Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fb;
+        }
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #111827;
+        }
+        .desc {
+            color: #4b5563;
+            margin-top: 6px;
+            font-size: 14px;
+        }
+        .btn {
+            padding: 10px 18px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        .btn:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+<header>Airdrop Finder</header>
+
+<div class="container">
+    <div class="search-box">
+        <input type="text" placeholder="Search airdrops..." />
+    </div>
+
+    <div class="card">
+        <div class="info">
+            <span class="title">DeCA Testnet Airdrop</span>
+            <span class="desc">Earn free tokens by completing testnet tasks.</span>
+        </div>
+        <a class="btn" href="#">View Airdrop</a>
+    </div>
+
+    <div class="card">
+        <div class="info">
+            <span class="title">LayerZero zkAirdrop</span>
+            <span class="desc">Bridge assets and interact to qualify.</span>
+        </div>
+        <a class="btn" href="#">View Airdrop</a>
+    </div>
+
+    <div class="card">
+        <div class="info">
+            <span class="title">Base Chain Airdrop</span>
+            <span class="desc">Use Base ecosystem apps to join early users list.</span>
+        </div>
+        <a class="btn" href="#">View Airdrop</a>
+    </div>
+</div>
+
+</body>
+</html>
